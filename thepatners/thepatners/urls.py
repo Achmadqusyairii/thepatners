@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.http import HttpResponse
-from .views import home
+from .views import home, page1, page2, page3
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', home),
-    
+    path('home/', home, name='home'),
+    path('page1/', page1, name='page1'),
+    path('page2/', page2, name='page2'),
+    path('page3/', page3, name='page3'),
 ]
